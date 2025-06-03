@@ -1,0 +1,29 @@
+<p>data-list works!</p>
+<div class="container">
+  <h2>Data List</h2>
+  <button (click)="addData()">Add New Item</button>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="margin-top: 10px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataList">
+        <td>{{ data.id }}</td>
+        <td>{{ data.name }}</td>
+        <td>{{ data.description }}</td>
+        <td>
+          <button (click)="editData(data.id!)">Edit</button>
+          <button (click)="deleteData(data.id!)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>
+
