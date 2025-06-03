@@ -1,0 +1,16 @@
+<h2>Edit Datas</h2>
+
+<form *ngIf="data" (ngSubmit)="updateData()">
+  <label>
+    Name:
+    <input [(ngModel)]="data.name" name="name" required />
+  </label>
+  <br /><br />
+  <label>
+    Description:
+    <input [(ngModel)]="data.description" name="description" required />
+  </label>
+  <br /><br />
+  <button type="submit">Update</button>
+  <button type="button" (click)="cancel()">Cancel</button>
+</form>

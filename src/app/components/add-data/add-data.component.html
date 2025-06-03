@@ -1,0 +1,15 @@
+<h2>Add New Data</h2>
+    <form (ngSubmit)="saveData()">
+      <label>
+        Name:
+        <input type="text" [(ngModel)]="data.name" name="name" required />
+      </label>
+      <br /><br />
+      <label>
+        Description:
+        <input [(ngModel)]="data.description" name="description" required />
+      </label>
+      <br /><br />
+      <button type="submit">Save</button>
+      <button type="button" (click)="cancel()">Cancel</button>
+    </form>
